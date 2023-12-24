@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Image</title>
+    <style>
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 400px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Show Image</h1>
+    <h2>Selected Picture: {{ selected_picture }}</h2>
+    
+    <div class="image-container">
+        <h3>Image</h3>
+        <img src="data:image/png;base64,{{ image }}" alt="Image">
+    </div>
+    
+    <div class="image-container">
+        <h3>Mask</h3>
+        <img src="data:image/png;base64,{{ mask }}" alt="Mask">
+    </div>
+    
+    <div class="image-container">
+        <h3>Predicted Mask</h3>
+        <img src="data:image/png;base64,{{ predicted_mask_path }}" alt="Predicted Mask">
+    </div>
+    
+    <a href="/">Go back to the list</a>
+</body>
+</html>
+
+    
+    

@@ -1,0 +1,19 @@
+## For views.py:
+
+#pandas
+#pillow
+#numpy
+#requests
+
+flask
+
+
+## For models.py:
+
+flask_sqlalchemy
+
+
+
+
+
+
