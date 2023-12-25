@@ -13,8 +13,8 @@ on:
 env:
   PIPELINE_USER_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   PIPELINE_USER_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #PIPELINE_USER_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }} 
-  aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+  PIPELINE_USER_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }} 
+  #aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
   SAM_TEMPLATE: template.yaml
   TESTING_STACK_NAME: dev-web-list-sample-app
   TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::095893807368:role/aws-sam-cli-managed-dev-web-l-PipelineExecutionRole-sHSjFguc2Z62
