@@ -10,6 +10,10 @@ import requests
 from PIL import Image
 from io import BytesIO
 import base64
+import mangum
+from mangum import Mangum
+
+
 
 # WEB API setup
 flask_web_app = flask.Flask(__name__, static_folder="./keras_prediction_via_web_app/static")
@@ -128,6 +132,7 @@ def show_image(image_name):
 # Closes the CONTEXT AFTER Python/SQL INTERACTION is completed
 app_ctx.pop()
 
+handler=Mangum(flask_web_app)
 
 #if __name__ == '__main__':
 #    flask_web_app.run(host='0.0.0.0', port=8000, debug=True)

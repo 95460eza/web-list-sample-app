@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Description: >
+  web-list-sample-app  
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 3
+    MemorySize: 128
+
+Resources:
+  WeblistSampleAppFunction:		# Any name you want
+    Type: AWS::Serverless::Function     # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:      
+      Handler: app.lambda_handler	# Refers to FILE "app.py" where the HANDLER FUNCTION named "lambda_handler" is defined (Ex: lambda_handler=Mangum(app_lstm) ). 
+					
+      Runtime: python3.10
+      CodeUri: .			# Tells AWS WHERE the Lambda function CODE FILES are "RELATIVE" to the location of the template.yaml. Here "." means in the same directory.
+                                        # Default is "."; Otherwise use /folder_1/folder_2 (No quotes)
+      #Architectures:
+      # - x86_64
+      Events:
+        APIUrlMainRoute:		# Any name you want
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /			# "/" means API endpoint main page
+            Method: get
+

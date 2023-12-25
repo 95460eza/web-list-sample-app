@@ -7,10 +7,15 @@
 
 flask
 
-
 ## For models.py:
 
 flask_sqlalchemy
+
+
+
+## for HANDLER for the AWS Lambda Serverless Function
+
+mangum
 
 
 
