@@ -1,19 +1,18 @@
 version = 0.1
 [default.pipeline_bootstrap.parameters]
-#pipeline_user = "arn:aws:iam::095893807368:user/aws-sam-cli-managed-dev-web-list-sampl-PipelineUser-1yk2PCpkC61f"
-pipeline_user = "arn:aws:iam::095893807368:user/koffi_oc_post_training"
+pipeline_user = "arn:aws:iam::095893807368:user/aws-sam-cli-managed-devpt-pipeline-res-PipelineUser-YW139IQHJpix"
 permissions_provider = "AWS IAM"
 
-[dev-web-list-sample-app.pipeline_bootstrap.parameters]
-pipeline_execution_role = "arn:aws:iam::095893807368:role/aws-sam-cli-managed-dev-web-l-PipelineExecutionRole-sHSjFguc2Z62"
-cloudformation_execution_role = "arn:aws:iam::095893807368:role/aws-sam-cli-managed-dev-w-CloudFormationExecutionRo-fNogUQWyYwBu"
-artifacts_bucket = "aws-sam-cli-managed-dev-web-list-s-artifactsbucket-rjbpnocrmzcs"
+[devpt.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::095893807368:role/aws-sam-cli-managed-devpt-pip-PipelineExecutionRole-4aNoAippcukB"
+cloudformation_execution_role = "arn:aws:iam::095893807368:role/aws-sam-cli-managed-devpt-CloudFormationExecutionRo-1zVdRJohg7Pg"
+artifacts_bucket = "aws-sam-cli-managed-devpt-pipeline-artifactsbucket-uj0bqlyx6oor"
 image_repository = ""
 region = "eu-north-1"
 
-[prod-web-list-sample-app.pipeline_bootstrap.parameters]
-pipeline_execution_role = "arn:aws:iam::095893807368:role/aws-sam-cli-managed-prod-web--PipelineExecutionRole-iUxQMzJpEvSR"
-cloudformation_execution_role = "arn:aws:iam::095893807368:role/aws-sam-cli-managed-prod--CloudFormationExecutionRo-GTkWZZFxTIR6"
-artifacts_bucket = "aws-sam-cli-managed-prod-web-list--artifactsbucket-ys8aguifd528"
+[prodction.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::095893807368:role/aws-sam-cli-managed-prodction-PipelineExecutionRole-pL7kz1Cxibdm"
+cloudformation_execution_role = "arn:aws:iam::095893807368:role/aws-sam-cli-managed-prodc-CloudFormationExecutionRo-T9WtDLPEJysV"
+artifacts_bucket = "aws-sam-cli-managed-prodction-pipe-artifactsbucket-ehjcjmxrisy4"
 image_repository = ""
 region = "eu-north-1"
