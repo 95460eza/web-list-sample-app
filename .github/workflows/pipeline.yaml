@@ -51,6 +51,7 @@ jobs:
         with:
           use-installer: true
 
+
       - name: Assume the testing pipeline user role
         uses: aws-actions/configure-aws-credentials@v1-node16
         with:
