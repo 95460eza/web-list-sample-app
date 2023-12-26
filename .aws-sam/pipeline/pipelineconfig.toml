@@ -1,7 +1,8 @@
 version = 0.1
-#[default.pipeline_bootstrap.parameters]
+[default.pipeline_bootstrap.parameters]
 #pipeline_user = "arn:aws:iam::095893807368:user/aws-sam-cli-managed-dev-web-list-sampl-PipelineUser-1yk2PCpkC61f"
-#permissions_provider = "AWS IAM"
+pipeline_user = "arn:aws:iam::095893807368:user/koffi_oc_post_training"
+permissions_provider = "AWS IAM"
 
 [dev-web-list-sample-app.pipeline_bootstrap.parameters]
 pipeline_execution_role = "arn:aws:iam::095893807368:role/aws-sam-cli-managed-dev-web-l-PipelineExecutionRole-sHSjFguc2Z62"
