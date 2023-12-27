@@ -12,7 +12,7 @@ Description: >
 
 Resources:
   WeblistSampleAppFunction:             # Any name you want
-    Type: AWS::Serverless::Function     # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Type: AWS::Serverless::Function     #awsserverlessfunction
     Properties:      
       Handler: app.lambda_handler       # Refers to FILE "app.py" where the HANDLER FUNCTION named "lambda_handler" is defined (Ex: lambda_handler=Mangum(app_lstm) ).			
       Runtime: python3.10
