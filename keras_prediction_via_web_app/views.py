@@ -1,6 +1,6 @@
 import os
 import flask
-from flask import render_template
+#from flask import render_template
 #from flask import send_from_directory
 from .models import db, Table_datasetphotos_names
 import numpy as np
@@ -11,7 +11,7 @@ from PIL import Image
 from io import BytesIO
 import base64
 import mangum
-from mangum import Mangum
+#from mangum import Mangum
 
 
 
@@ -51,7 +51,7 @@ def home_page():
     for_webpage_name_list = [var.photo_file_names for var in Table_datasetphotos_names.query.all()]
     # return "<h1>Trying building a FLASK API</h1><p>This site is a prototype API for Image Semantic Segmentation.</p>"
 
-    return render_template('index.html', names=for_webpage_name_list)
+    return flask.render_template('index.html', names=for_webpage_name_list)
 
 
 # Convert Image.open() object to proper displaying format
@@ -125,14 +125,14 @@ def show_image(image_name):
     mask = image_to_base64(mask)
 
     # return send_from_directory("static", image_name, mimetype='image/png')
-    return render_template("show_image.html", selected_picture=actual_pictures, image=image, mask=mask,
+    return flask.render_template("show_image.html", selected_picture=actual_pictures, image=image, mask=mask,
                            predicted_mask_path=predicted_mask)
 
 
 # Closes the CONTEXT AFTER Python/SQL INTERACTION is completed
 app_ctx.pop()
 
-handler=Mangum(flask_web_app)
+
 
 #if __name__ == '__main__':
 #    flask_web_app.run(host='0.0.0.0', port=8000, debug=True)
