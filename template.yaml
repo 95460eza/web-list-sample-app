@@ -5,10 +5,10 @@ Description: >
   web-list-sample-app  
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
-Globals:
-  Function:
-    Timeout: 3
-    MemorySize: 128
+#Globals:
+  #Function:
+    #Timeout: 3
+    #MemorySize: 128
 
 Resources:
   WeblistSampleAppFunction:             # Any name you want
