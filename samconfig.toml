@@ -2,7 +2,7 @@ version = 0.1
 [default.deploy.parameters]
 stack_name = "web-list-sample-app"
 region = "eu-north-1"
-confirm_changeset = true
+confirm_changeset = false
 capabilities = "CAPABILITY_IAM"
 disable_rollback = true
 
