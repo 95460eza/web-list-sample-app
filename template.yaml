@@ -9,7 +9,6 @@ Description: >
   #Function:
     #Timeout: 3
     #MemorySize: 128
-
 Resources:
   WeblistSampleAppFunction:             # Any name you want
     Type: AWS::Serverless::Function     #awsserverlessfunction
